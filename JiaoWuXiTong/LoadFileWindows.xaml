@@ -1,0 +1,27 @@
+﻿<Window x:Class="JiaoWuXiTong.LoadFileWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JiaoWuXiTong"
+        mc:Ignorable="d"
+        Title="LoadFileWindows" Height="200" Width="550" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid Name="LoadGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="100" MinColumnWidth="100" MaxColumnWidth="100">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="信息" IsReadOnly="True" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="是否导入" IsReadOnly="True" Binding="{Binding State}"></DataGridTextColumn>
+                <DataGridTextColumn Header="原始路径" IsReadOnly="True" Binding="{Binding OriginalPath}"></DataGridTextColumn>
+                <DataGridTextColumn Header="项目路径" IsReadOnly="True" Binding="{Binding ProjectPath}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="导入">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding Btn_Content}" Click="LoadFile" Tag="{Binding ID}"/>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

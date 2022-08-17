@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nUVGZs8IYtFSnvRnTJDLDLHhzrW8z7gSoPTvOqR66OX+I9ifX2dumhAQXJKZxHZeYt3YJD3tx/WjaAJrSb+crg==",
+  "dgSpecHash": "umQfoGtRc7CvAzcXnNCBHK6NoH8PQjirDv5N7Dra1x+uYEaIKKgCn14UW6FzPjG+hqztO2k5bCl9LsU1wf/s8Q==",
   "success": true,
   "projectFilePath": "E:\\Learn\\WPF\\JiaoWuXiTong\\JiaoWuXiTong\\JiaoWuXiTong.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\litjson\\0.18.0\\litjson.0.18.0.nupkg.sha512"
+  ],
   "logs": []
 }

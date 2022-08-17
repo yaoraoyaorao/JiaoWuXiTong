@@ -1,4 +1,7 @@
-﻿using System;
+﻿using JiaoWuXiTong.Core;
+using JiaoWuXiTong.DataMode;
+using JsonTool;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,28 @@ namespace JiaoWuXiTong
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<Course> c;
+
         public MainWindow()
         {
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //c = DataManager.Instance.courses;
+            //c.Add(new Course(001, "数学"));
+            //c.Add(new Course(002, "语文"));
+            //c.Add(new Course(003, "英语"));
+            //c.Add(new Course(004, "体育"));
+            //DataManager.Instance.SaveCourses();
+        }
+
+        private void LoadFile(object sender, ExecutedRoutedEventArgs e)
+        {
+            LoadFileWindows loadFileWindows = new LoadFileWindows();
+            loadFileWindows.ShowDialog();
         }
     }
 }
